@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="fr" datatype="plaintext" original="messages" date="2014-03-21T15:40:30Z" product-name="arc_fbconnect">
+		<header/>
+		<body>
+			<trans-unit id="login">
+				<source>Connect via Facebook</source>
+                                <target state="translated">Se connecter avec Facebook</target>
+			</trans-unit>
+			<trans-unit id="relogin">
+				<source>Re-connect via Facebook</source>
+                                <target state="translated">Se reconnecter avec Facebook</target>
+			</trans-unit>
+			<trans-unit id="logout">
+				<source>Logout</source>
+                                <target state="translated">Se déconnecter</target>
+			</trans-unit>
+                </body>
+        </file>
+</xliff>

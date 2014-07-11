@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+        <meta type="array">
+                <type>module</type>
+                <description>Language labels for plugin &quot;tx_arcfbconnect_pi&quot;</description>
+        </meta>
+        <data type="array">
+                <languageKey index="default" type="array">
+                        <label index="login">Connect via Facebook</label>
+                        <label index="relogin">Re-connect via Facebook</label>
+                        <label index="logout">Logout</label>
+                </languageKey>
+                <languageKey index="fr" type="array">
+                        <label index="login">Se connecter avec Facebook</label>
+                        <label index="relogin">Se reconnecter avec Facebook</label>
+                        <label index="logout">Se déconnecter</label>
+                </languageKey>
+        </data>
+</T3locallang>

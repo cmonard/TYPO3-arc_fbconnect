@@ -1,0 +1,13 @@
+# Debug plugin
+plugin.tx_arcfbconnect_debug {
+        overridingConf < plugin.tx_arcfbconnect_connector.overridingConf
+        additionalScope < plugin.tx_arcfbconnect_connector.additionalScope
+}
+
+# Declare debug page
+FBConnectorDebug = PAGE
+FBConnectorDebug {
+        typeNum = 301
+        config.no_cache = 1
+        10 = < plugin.tx_arcfbconnect_debug
+}

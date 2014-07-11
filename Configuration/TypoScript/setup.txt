@@ -1,0 +1,185 @@
+plugin.tx_arcfbconnect_connector {
+        # Pid of the profil page to redirect the user after his account creation
+        goToProfilAfterCeate = 0
+        # we can override conf for extension installation
+        overridingConf {
+#                appId=
+#                secret=
+#                fileUpload=FALSE
+#                trustForwarded=FALSE
+#                allowSignedRequest=FALSE
+#                sharedSession=FALSE
+        }
+        # Additional scope to retrieve from user profil
+        # See https://developers.facebook.com/docs/facebook-login/permissions#reference-extended
+        additionalScope {
+                Basic {
+                        #Gives access to a subset of a person's public profile and friend list. Required when requesting permissions on iOS and Android.
+                        basic_info = 1
+                }
+                Email {
+                        #Provides access to the user's primary email address in the email property on the user object. Do not spam users. Your use of email must comply both with Facebook policies and with the CAN-SPAM Act.
+                        email = 1
+                }
+                ExtendedProfil {
+                        #Provides access to the 'About Me' section of the profile in the about property
+                        user_about_me = 0
+                        friends_about_me = 0
+                        #Provides access to the user's list of activities as the activities connection
+                        user_activities = 0
+                        friends_activities = 0
+                        #Provides access to the birthday with year as the birthday property. Note that your app may determine if a user is 'old enough' to use an app by obtaining the age_range public profile property
+                        user_birthday = 1
+                        friends_birthday = 0
+                        #Provides read access to the authorized user's check-ins or a friend's check-ins that the user can see. This permission is superseded by user_status for new applications as of March, 2012.
+                        user_checkins = 0
+                        friends_checkins = 0
+                        #Provides access to education history as the education property
+                        user_education_history = 0
+                        friends_education_history = 0
+                        #Provides access to the list of events the user is attending as the events connection
+                        user_events = 0
+                        friends_events = 0
+                        #Provides access to the list of groups the user is a member of as the groups connection
+                        user_groups = 0
+                        friends_groups = 0
+                        #Provides access to the user's hometown in the hometown property
+                        user_hometown = 0
+                        friends_hometown = 0
+                        #Provides access to the user's list of interests as the interests connection
+                        user_interests = 0
+                        friends_interests = 0
+                        #Provides access to the list of all of the pages the user has liked as the likes connection
+                        user_likes = 0
+                        friends_likes = 0
+                        #Provides access to the user's current city as the location property
+                        user_location = 1
+                        friends_location = 0
+                        #Provides access to the user's notes as the notes connection
+                        user_notes = 0
+                        friends_notes = 0
+                        #Provides access to the photos the user has uploaded, and photos the user has been tagged in
+                        user_photos = 1
+                        friends_photos = 0
+                        #Provides access to the questions the user or friend has asked
+                        user_questions = 0
+                        friends_questions = 0
+                        #Provides access to the user's family and personal relationships and relationship status
+                        user_relationships = 0
+                        friends_relationships = 0
+                        #Provides access to the user's relationship preferences
+                        user_relationship_details = 0
+                        friends_relationship_details = 0
+                        #Provides access to the user's religious and political affiliations
+                        user_religion_politics = 0
+                        friends_religion_politics = 0
+                        #Provides access to the user's status messages and checkins. Please see the documentation for the location_post table for information on how this permission may affect retrieval of information about the locations associated with posts.
+                        user_status = 0
+                        friends_status = 0
+                        #Provides access to the user's subscribers and subscribees
+                        user_subscriptions = 0
+                        friends_subscriptions = 0
+                        #Provides access to the videos the user has uploaded, and videos the user has been tagged in
+                        user_videos = 0
+                        friends_videos = 0
+                        #Provides access to the user's web site URL
+                        user_website = 0
+                        friends_website = 0
+                        #Provides access to work history as the work property
+                        user_work_history = 0
+                        friends_work_history = 0
+                }
+                ExtendedPermissions {
+                        #Provides access to any friend lists the user created. All user's friends are provided as part of basic data, this extended permission grants access to the lists of friends a user has created, and should only be requested if your application utilizes lists of friends.
+                        read_friendlists = 0
+                        #Provides read access to Facebook Insights data for pages, applications, and domains the user owns.
+                        read_insights = 0
+                        #Provides the ability to read from a user's Facebook Inbox.
+                        read_mailbox = 0
+                        #Provides read access to the user's friend requests
+                        read_requests = 0
+                        #Provides access to all the posts in the user's News Feed and enables your application to perform searches against the user's News Feed
+                        read_stream = 0
+                        #Provides applications that integrate with Facebook Chat the ability to log in users.
+                        xmpp_login = 0
+                        #Provides access to the user's online/offline presence
+                        user_online_presence = 0
+                        #Provides access to the user's friend's online/offline presence
+                        friends_online_presence = 0
+                }
+                ExtendedPermissionsPublish {
+                        #Provides the ability to manage ads and call the Facebook Ads API on behalf of a user.
+                        ads_management = 0
+                        #Enables your application to create and modify events on the user's behalf
+                        create_event = 0
+                        #Enables your app to create and edit the user's friend lists.
+                        manage_friendlists = 0
+                        #Enables your app to read notifications and mark them as read. Intended usage: This permission should be used to let users read and act on their notifications; it should not be used to for the purposes of modeling user behavior or data mining. Apps that misuse this permission may be banned from requesting it.
+                        manage_notifications = 0
+                        #Enables your app to post content, comments and likes to a user's stream and requires extra permissions from a person using your app. Because this permission lets you publish on behalf of a user please read the Platform Policies to ensure you understand how to properly use this permission. Note, you do not need to request the publish_actions permission in order to use the Feed Dialog, the Requests Dialog or the Send Dialog. Facebook used to have a permission called publish_stream, publish_actions replaces it in most cases, for users. For pages, publish_stream is still required to publish to a page's timeline.
+                        publish_actions = 0
+                        #The publish_stream permission is required to post to a Facebook Page's timeline. For a Facebook User use publish_actions.
+                        publish_stream = 0
+                        #Enables your application to RSVP to events on the user's behalf
+                        rsvp_event = 0
+                }
+                OpenGraphPermissions {
+                        #Allows your app to publish to the Open Graph using Built-in Actions, Achievements, Scores, or Custom Actions. Your app can also publish other activity which is detailed in the Publishing Permissions doc.
+                        publish_actions = 0
+                        #Allows you to retrieve the actions published by all applications using the built-in music.listens action.
+                        user_actions.music = 0
+                        friends_actions.music = 0
+                        #Allows you to retrieve the actions published by all applications using the built-in news.reads action.
+                        user_actions.news = 0
+                        friends_actions.news = 0
+                        #Allows you to retrieve the actions published by all applications using the built-in video.watches action.
+                        user_actions.video = 0
+                        friends_actions.video = 0
+                        #Allows you to post and retrieve game achievement activity.
+                        user_games_activity = 0
+                        friends_games_activity = 0
+                }
+                Pages {
+                        #Enables your application to retrieve access_tokens for Pages and Applications that the user administrates. The access tokens can be queried by calling /{user_id}/accounts via the Graph API.
+                        manage_pages = 0
+                        #Enables your application to retrieve the Facebook Messages conversations for Pages. You must use a Page Access Token to do this. Conversations are retrieved by calling /{page_id}/conversations via the Graph API.                }
+                        read_page_mailboxes = 0
+                }
+        }
+        # Mapping fe_users fields < FaceBook fields (stdWrap enabled configuration)
+        mapping {
+                pid = 0
+                usergroup = 0
+                password.field = id
+                password.hash = md5
+                username.field = email
+                name.field = name
+                first_name.field = first_name
+                last_name.field = last_name
+                email.field = email
+                city {
+                        field = location.name
+                        listNum = 0
+                }
+                country {
+                        field = location.name
+                        listNum = last
+                }
+                www.field = website//link
+                company {
+                     field = work.0.employer.name
+                     if.isFalse.field = work.0.employer.end_date
+                }
+                company {
+                     field = work.0.employer.name
+                     if.isFalse.field = work.0.employer.end_date
+                }
+                title {
+                     field = work.0.position.name
+                     if.isFalse.field = work.0.employer.end_date
+                }
+                # FB field suffixed by _stampt is the tstamp format for birthdate and all work (you can have total work count in the register: FBConnector_workCount)
+                tx_arcfbconnect_birthday.field = birthday_tstamp
+                tx_arcfbconnect_fbID.field = id
+        }
+}

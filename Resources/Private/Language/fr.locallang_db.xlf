@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="fr" datatype="plaintext" original="messages" date="2014-03-21T15:40:30Z" product-name="arc_fbconnect">
+		<header/>
+		<body>
+			<trans-unit id="fe_users.tx_arcfbconnect_birthday">
+				<source>Birthday</source>
+                                <target state="translated">Date de naissance</target>
+			</trans-unit>
+			<trans-unit id="fe_users.tx_arcfbconnect_fbID">
+				<source>FaceBook ID</source>
+                                <target state="translated">ID FaceBook</target>
+			</trans-unit>
+                </body>
+        </file>
+</xliff>
