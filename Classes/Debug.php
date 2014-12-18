@@ -29,6 +29,7 @@ class Debug extends \tslib_pibase {
                 }
                 if ($this->version45) {
                         require_once (\t3lib_extMgm::extPath($this->extKey, 'Classes/Facebook/facebook.php'));
+                        $this->cObj = \t3lib_div::makeInstance('tslib_cObj');
                 } else {
                         require_once (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($this->extKey, 'Classes/Facebook/facebook.php')); // 6.x version
                 }
